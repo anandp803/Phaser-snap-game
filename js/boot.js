@@ -1,9 +1,8 @@
-var gameConfig=
-{
-	type: Phaser.AUTO,
-    width: 800,
-    height: 600,    
-    scene: [Home,GamePlay]
-};
+var game = new Phaser.Game(1024, 768, Phaser.Auto, "game");
 
-var game=new Phaser.Game(gameConfig);
+
+game.state.add('Home', Home, true);
+game.state.add('GamePlay', GamePlay, true)
+
+
+game.state.start('Home');
